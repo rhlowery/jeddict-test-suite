@@ -33,7 +33,7 @@ public class FullstackApplicationTest extends BaseModelTest {
     @Test
     void testAngularApp() throws Exception {
 
-        Project project = createProject();
+        Project project = createProject("angular-app");
         EntityMappings entityMappings = loadEntityMappings("MonolithModel.jpa");
         assertNotNull(entityMappings);
 
@@ -43,6 +43,7 @@ public class FullstackApplicationTest extends BaseModelTest {
 
         generateClasses(entityMappings, source);
 
+        fireMavenBuild(project);
     }
 
 }
