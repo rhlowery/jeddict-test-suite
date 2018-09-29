@@ -43,5 +43,8 @@ before_install:
     - pushd ~/builds/hipee
     - mvn clean install
     - popd
+    
+    - export M2_HOME=/usr/local/maven-3.5.2
+    
 script:
     - mvn test -B -Dtestcase=AngularApplicationTest
