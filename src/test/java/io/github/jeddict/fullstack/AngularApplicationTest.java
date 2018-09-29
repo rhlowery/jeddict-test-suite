@@ -32,7 +32,7 @@ public class AngularApplicationTest extends RestApplicationTest {
     @Override
     void test() throws Exception {
         Project project = generateMonolith("angular-sample-app", "emp-job.jpa");
-        fireMavenProcess(project, asList("clean", "install"), asList("prod"), null);
+        fireMavenBuild(project, asList("clean", "install"), asList("prod"), null);
     }
 
     @Override

@@ -12,6 +12,11 @@ node_js:
   - "8.11.4"
 os:
   - linux
+env:
+ - TEST_CASE="AngularApplicationTest"
+ - TEST_CASE="AngularMicroServicesTest"
+ - TEST_CASE="RepositoryApplicationTest"
+ - TEST_CASE="RestApplicationTest"
 before_install:
     # Upgrade NPM
     - npm install -g npm
@@ -57,4 +62,4 @@ before_install:
 
     
 script:
-    - mvn test -B -Dtestcase=AngularApplicationTest
+    - mvn test -B -Dtestcase=${TEST_CASE}
