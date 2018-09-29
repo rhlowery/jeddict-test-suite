@@ -48,7 +48,7 @@ public class RestApplicationTest extends RepositoryApplicationTest {
         RESTData restData = new RESTData();
         restData.setPrefixName("");
         restData.setPackage("controller");
-        restData.setTestCase(false);
+        restData.setTestCase(true);
         TechContext techContext = new TechContext(RESTGenerator.class);
         techContext.findSiblingTechContext(I18NGenerator.class)
                 .ifPresent(context -> context.setConfigData(i18nData));

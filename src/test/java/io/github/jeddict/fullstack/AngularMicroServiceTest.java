@@ -26,7 +26,7 @@ import org.netbeans.api.project.Project;
  *
  * @author jGauravGupta
  */
-public class AngularMicroServicesTest extends RestApplicationTest {
+public class AngularMicroServiceTest extends RestApplicationTest {
 
     @Test
     @Override

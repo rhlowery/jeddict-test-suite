@@ -13,10 +13,12 @@ node_js:
 os:
   - linux
 env:
- - TEST_CASE="AngularApplicationTest"
- - TEST_CASE="AngularMicroServicesTest"
- - TEST_CASE="RepositoryApplicationTest"
+ - TEST_CASE="RepositoryApplication"
  - TEST_CASE="RestApplicationTest"
+ - TEST_CASE="AngularApplication"
+ - TEST_CASE="AngularMicroService"
+ - TEST_CASE="ReactJSApplication"
+ - TEST_CASE="ReactJSMicroService"
 before_install:
     # Upgrade NPM
     - npm install -g npm
