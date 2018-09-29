@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="domain" v="4.4" rws="_15032505181252" Pws="_15032505181252" cws="_15032505181252" sm="false" xs="false" id="_15032505181251" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity compositePrimaryKeyClass="SampleAttrPK" abs="false" class="SampleAttr" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_1503250526903">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="stringAttribute" id="_15032505348735">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="intAttribute" id="_15032505608156">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="long" v="true" xvt="" name="longAttribute" id="_15032505664097">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="float" v="true" xvt="" name="floatAttribute" id="_15032505754378">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="double" v="true" xvt="" name="doubleAttribute" id="_15032505934429">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Boolean" v="true" xvt="" name="booleanAttribute" id="_150325062148710">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.math.BigDecimal" v="true" xvt="" name="bigDecimalAttribute" id="_150325063543511">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_15032505270163">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="SampleAttr.findAll">
+            <jpa:query>Select e from SampleAttr e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="SampleAttr.findByStringAttribute">
+            <jpa:query>Select s from SampleAttr s where s.stringAttribute=:stringAttribute</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="SampleAttr.findByIntAttribute">
+            <jpa:query>Select s from SampleAttr s where s.intAttribute=:intAttribute</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="SampleAttr.findByLongAttribute">
+            <jpa:query>Select s from SampleAttr s where s.longAttribute=:longAttribute</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="SampleAttr.findByFloatAttribute">
+            <jpa:query>Select s from SampleAttr s where s.floatAttribute=:floatAttribute</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="SampleAttr.findByDoubleAttribute">
+            <jpa:query>Select s from SampleAttr s where s.doubleAttribute=:doubleAttribute</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="SampleAttr.findByBooleanAttribute">
+            <jpa:query>Select s from SampleAttr s where s.booleanAttribute=:booleanAttribute</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="SampleAttr.findByBigDecimalAttribute">
+            <jpa:query>Select s from SampleAttr s where s.bigDecimalAttribute=:bigDecimalAttribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="DateAttrPK" abs="false" class="DateAttr" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_1503250647239">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.time.ZonedDateTime" v="true" xvt="" name="zonedDateTimeAttribute" id="_150325065561414">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.time.Instant" v="true" xvt="" name="instantAttribute" id="_150325066448215">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.time.LocalDate" v="true" xvt="" name="localDateAttribute" id="_150325067385416">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150325064724112">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="DateAttr.findAll">
+            <jpa:query>Select e from DateAttr e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="DateAttr.findByZonedDateTimeAttribute">
+            <jpa:query>Select d from DateAttr d where d.zonedDateTimeAttribute=:zonedDateTimeAttribute</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="DateAttr.findByInstantAttribute">
+            <jpa:query>Select d from DateAttr d where d.instantAttribute=:instantAttribute</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="DateAttr.findByLocalDateAttribute">
+            <jpa:query>Select d from DateAttr d where d.localDateAttribute=:localDateAttribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ByteAttrPK" abs="false" class="ByteAttr" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_1503250722528">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="byteBufferAttribute" id="_150325072896619">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150325072252917">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ByteAttr.findAll">
+            <jpa:query>Select e from ByteAttr e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ByteAttr.findByByteBufferAttribute">
+            <jpa:query>Select b from ByteAttr b where b.byteBufferAttribute=:byteBufferAttribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="OneToOneUniPK" abs="false" class="OneToOneUni" v="true" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_1504392912660">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439292656412">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504392920449" v="true" xvt="" name="oneToOneUniB" id="_150439293809414">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_15043929126648">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="OneToOneUni.findAll">
+            <jpa:query>Select e from OneToOneUni e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="OneToOneUni.findByAttribute">
+            <jpa:query>Select e from OneToOneUni e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="OneToOneUniBPK" abs="false" class="OneToOneUniB" v="true" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_1504392920449">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439292942713">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439292044910">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="OneToOneUniB.findAll">
+            <jpa:query>Select e from OneToOneUniB e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="OneToOneUniB.findByAttribute">
+            <jpa:query>Select e from OneToOneUniB e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="OneToOneiBiPK" abs="false" class="OneToOneiBi" v="true" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439301993615">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439301993617">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_150439302586219" connected-attribute-id="_150439308594148" v="true" xvt="" name="oneToOneBiB" id="_150439308594047">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439301993616">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="OneToOneiBi.findAll">
+            <jpa:query>Select e from OneToOneiBi e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="OneToOneiBi.findByAttribute">
+            <jpa:query>Select e from OneToOneiBi e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="OneToOneBiBPK" abs="false" class="OneToOneBiB" v="true" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439302586219">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439302586221">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-one orp="false" optional="true" primaryKey="false" connected-entity-id="_150439301993615" connected-attribute-id="_150439308594047" v="true" xvt="" name="oneToOneiBi" id="_150439308594148">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439302586220">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="OneToOneBiB.findAll">
+            <jpa:query>Select e from OneToOneBiB e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="OneToOneBiB.findByAttribute">
+            <jpa:query>Select e from OneToOneBiB e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="OneToManyUniPK" abs="false" class="OneToManyUni" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439303251823">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439303251825">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_150439303947827" v="true" xvt="" name="oneToManyUniBs" id="_150439310192749">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439303251824">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="OneToManyUni.findAll">
+            <jpa:query>Select e from OneToManyUni e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="OneToManyUni.findByAttribute">
+            <jpa:query>Select e from OneToManyUni e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="OneToManyUniBPK" abs="false" class="OneToManyUniB" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439303947827">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439303947829">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439303947828">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="OneToManyUniB.findAll">
+            <jpa:query>Select e from OneToManyUniB e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="OneToManyUniB.findByAttribute">
+            <jpa:query>Select e from OneToManyUniB e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ManyToOneUniPK" abs="false" class="ManyToOneUni" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439304546931">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439304546933">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_150439305218235" v="true" xvt="" name="manyToOneUniB" id="_150439312485450">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439304546932">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ManyToOneUni.findAll">
+            <jpa:query>Select e from ManyToOneUni e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ManyToOneUni.findByAttribute">
+            <jpa:query>Select e from ManyToOneUni e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ManyToOneUniBPK" abs="false" class="ManyToOneUniB" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439305218235">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439305218237">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439305218236">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ManyToOneUniB.findAll">
+            <jpa:query>Select e from ManyToOneUniB e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ManyToOneUniB.findByAttribute">
+            <jpa:query>Select e from ManyToOneUniB e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ManyToOneBiPK" abs="false" class="ManyToOneBi" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439305618139">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439305618141">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_150439306237243" connected-attribute-id="_150439315391852" v="true" xvt="" name="manyToOneBiB" id="_150439315391751">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439305618140">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ManyToOneBi.findAll">
+            <jpa:query>Select e from ManyToOneBi e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ManyToOneBi.findByAttribute">
+            <jpa:query>Select e from ManyToOneBi e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ManyToOneBiBPK" abs="false" class="ManyToOneBiB" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439306237243">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439306237245">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_150439305618139" connected-attribute-id="_150439315391751" v="true" xvt="" name="manyToOneBis" id="_150439315391852">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439306237244">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ManyToOneBiB.findAll">
+            <jpa:query>Select e from ManyToOneBiB e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ManyToOneBiB.findByAttribute">
+            <jpa:query>Select e from ManyToOneBiB e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ManyToManyUniPK" abs="false" class="ManyToManyUni" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439316733353">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439316733355">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:many-to-many own="true" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_150439317224757" v="true" xvt="" name="manyToManyUniBs" id="_150439320375069">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:many-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439316733354">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ManyToManyUni.findAll">
+            <jpa:query>Select e from ManyToManyUni e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ManyToManyUni.findByAttribute">
+            <jpa:query>Select e from ManyToManyUni e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ManyToManyUniBPK" abs="false" class="ManyToManyUniB" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439317224757">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439317224759">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439317224758">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ManyToManyUniB.findAll">
+            <jpa:query>Select e from ManyToManyUniB e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ManyToManyUniB.findByAttribute">
+            <jpa:query>Select e from ManyToManyUniB e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ManyToManyBiBPK" abs="false" class="ManyToManyBiB" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439317679661">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439317679663">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:many-to-many collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_150439317809065" connected-attribute-id="_150439321737270" v="true" xvt="" name="manyToManyBis" id="_150439321737371">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:many-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439317679662">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ManyToManyBiB.findAll">
+            <jpa:query>Select e from ManyToManyBiB e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ManyToManyBiB.findByAttribute">
+            <jpa:query>Select e from ManyToManyBiB e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ManyToManyBiPK" abs="false" class="ManyToManyBi" v="true" gen="false" jbn="false" xre="false" m="false" rootElement="_15032505181251" id="_150439317809065">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="attribute" id="_150439317809067">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:many-to-many own="true" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_150439317679661" connected-attribute-id="_150439321737371" v="true" xvt="" name="manyToManyBiBs" id="_150439321737270">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:many-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_150439317809066">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ManyToManyBi.findAll">
+            <jpa:query>Select e from ManyToManyBi e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ManyToManyBi.findByAttribute">
+            <jpa:query>Select e from ManyToManyBi e where e.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_15032505181252">
+            <i ref="_150439316733353" x="21" y="1104"/>
+            <i ref="_150439317809065" x="17" y="1252"/>
+            <i ref="_150439303947827" x="292" y="642"/>
+            <i ref="_1503250647239" x="361" y="65"/>
+            <i ref="_1504392920449" x="368" y="313"/>
+            <i ref="_1503250722528" x="192" y="52"/>
+            <i ref="_150439306237243" x="292" y="924"/>
+            <i ref="_150439304546931" x="18" y="786"/>
+            <i ref="_150439317224757" x="275" y="1104"/>
+            <i ref="_1503250526903" x="13" y="35"/>
+            <i ref="_150439301993615" x="33" y="468"/>
+            <i ref="_150439305218235" x="292" y="786"/>
+            <i ref="_150439305618139" x="18" y="924"/>
+            <i ref="_150439317679661" x="275" y="1252"/>
+            <i ref="_1504392912660" x="41" y="313"/>
+            <i ref="_150439302586219" x="292" y="468"/>
+            <i ref="_150439303251823" x="18" y="625"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>

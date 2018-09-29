@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" v="5.1" rws="_1537858444256261" cws="_1537858444256261" ptype="MONOLITH" ppkg="io.github.jeddict.fullstack" epkg="domain" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_1537858444256260" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity compositePrimaryKeyClass="BankAccountPK" abs="false" class="BankAccount" pclass="Entity_1" v="true" xre="false" m="false" rootElement="_1537858444256260" id="_1537858525816262">
+        <jpa:ath>jGauravGupta</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="name" pname="attribute" id="_1537858573514271"/>
+            <jpa:basic attribute-type="java.math.BigDecimal" v="true" xvt="" name="balance" pname="attribute" id="_1537858584825272">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:one-to-many collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_1537858614647273" connected-attribute-id="_1537858702891281" v="true" name="operations" id="_1537858702891282"/>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_1537858525824263">
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="BankAccount.findAll">
+            <jpa:query>Select e from BankAccount e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="BankAccount.findByName">
+            <jpa:query>Select b from BankAccount b where b.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="BankAccount.findByBalance">
+            <jpa:query>Select b from BankAccount b where b.balance=:balance</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="CustomerPK" abs="false" class="Customer" pclass="Entity_2" v="true" xre="false" m="false" rootElement="_1537858444256260" id="_1537858526868265">
+        <jpa:ath>jGauravGupta</jpa:ath>
+        <jpa:attributes>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_1537858526868266">
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Customer.findAll">
+            <jpa:query>Select e from Customer e</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="LabelPK" abs="false" class="Label" pclass="Entity_3" v="true" xre="false" m="false" rootElement="_1537858444256260" id="_1537858528111268">
+        <jpa:ath>jGauravGupta</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="label" pname="attribute" id="_1537858626865276"/>
+            <jpa:many-to-many collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_1537858614647273" connected-attribute-id="_1537858724796284" v="true" name="operations" id="_1537858724812285"/>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_1537858528111269">
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Label.findAll">
+            <jpa:query>Select e from Label e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Label.findByLabel">
+            <jpa:query>Select l from Label l where l.label=:label</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="OperationPK" abs="false" class="Operation" pclass="Entity_1" v="true" xre="false" m="false" rootElement="_1537858444256260" id="_1537858614647273">
+        <jpa:ath>jGauravGupta</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.time.Instant" v="true" xvt="" name="date" pname="attribute" id="_1537858658386277">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="description" pname="attribute" id="_1537858673129278"/>
+            <jpa:basic attribute-type="java.math.BigDecimal" v="true" xvt="" name="amount" pname="attribute" id="_1537858680857279">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1537858525816262" connected-attribute-id="_1537858702891282" v="true" name="bankAccount" id="_1537858702891281"/>
+            <jpa:many-to-many own="true" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_1537858528111268" connected-attribute-id="_1537858724812285" v="true" name="labels" id="_1537858724796284"/>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_1537858614647274">
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Operation.findAll">
+            <jpa:query>Select e from Operation e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Operation.findByDate">
+            <jpa:query>Select o from Operation o where o.date=:date</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Operation.findByDescription">
+            <jpa:query>Select o from Operation o where o.description=:description</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Operation.findByAmount">
+            <jpa:query>Select o from Operation o where o.amount=:amount</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_1537858444256261">
+            <i ref="_1537858525816262" x="377" y="138"/>
+            <i ref="_1537858526868265" x="570" y="596"/>
+            <i ref="_1537858528111268" x="262" y="392"/>
+            <i ref="_1537858614647273" x="737" y="224"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>

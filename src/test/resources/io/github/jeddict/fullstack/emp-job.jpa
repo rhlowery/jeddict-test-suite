@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" ppkg="io.github.jeddict.fullstack" epkg="domain" v="4.5" rws="_153785798937375" Pws="_153785798937375" cws="_153785798937375" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_15043978388311" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity compositePrimaryKeyClass="JobPK" abs="false" class="Job" v="true" xre="false" m="false" rootElement="_15043978388311" id="_15043978400012">
+        <jpa:inf e="true" n="java.io.Serializable"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="jobTitle" ft="false" id="_15043978406034">
+                <jpa:column name="job_title" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Long" v="true" name="minSalary" ft="false" id="_15043978406035">
+                <jpa:column name="min_salary" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Long" v="true" name="maxSalary" ft="false" id="_15043978406036">
+                <jpa:column name="max_salary" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_150439784101635" connected-attribute-id="_150439784101645" v="true" name="employee" ft="false" id="_15043978406037"/>
+            <jpa:many-to-many own="true" collection-type="java.util.Set" connected-entity-id="_150439784103847" connected-attribute-id="_150439784103851" v="true" name="tasks" ft="false" id="_15043978409288">
+                <jpa:join-table name="job_task">
+                    <jpa:join-column name="jobs_id" rc="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+                    <jpa:inverse-join-column name="tasks_id" rc="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+                </jpa:join-table>
+            </jpa:many-to-many>
+            <jpa:id attribute-type="Long" v="true" name="id" ft="false" id="_15043978403823">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="job"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="LocationPK" abs="false" class="Location" v="true" xre="false" m="false" rootElement="_15043978388311" id="_15043978409509">
+        <jpa:inf e="true" n="java.io.Serializable"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="streetAddress" ft="false" id="_150439784095011">
+                <jpa:column name="street_address" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="postalCode" ft="false" id="_150439784095012">
+                <jpa:column name="postal_code" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="city" ft="false" id="_150439784095013">
+                <jpa:column name="city" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="stateProvince" ft="false" id="_150439784095014">
+                <jpa:column name="state_province" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_150439784098928" v="true" name="country" ft="false" id="_150439784095015"/>
+            <jpa:id attribute-type="Long" v="true" name="id" ft="false" id="_150439784095010">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="location"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="JobHistoryPK" abs="false" class="JobHistory" v="true" xre="false" m="false" rootElement="_15043978388311" id="_150439784096216">
+        <jpa:inf e="true" n="java.io.Serializable"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.time.ZonedDateTime" v="true" name="startDate" ft="false" id="_150439784096218">
+                <jpa:column name="start_date" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.time.ZonedDateTime" v="true" name="endDate" ft="false" id="_150439784096219">
+                <jpa:column name="end_date" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_15043978400012" v="true" name="job" ft="false" id="_150439784096220"/>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_150439784097323" v="true" name="department" ft="false" id="_150439784096321"/>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_150439784101635" v="true" name="employee" ft="false" id="_150439784096322"/>
+            <jpa:id attribute-type="Long" v="true" name="id" ft="false" id="_150439784096217">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="job_history"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="DepartmentPK" abs="false" class="Department" v="true" xre="false" m="false" rootElement="_15043978388311" id="_150439784097323">
+        <jpa:inf e="true" n="java.io.Serializable"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="departmentName" ft="false" id="_150439784097425">
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+                <jpa:column name="department_name" unique="false" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:one-to-many own="false" collection-type="java.util.Set" connected-entity-id="_150439784101635" connected-attribute-id="_150439784101644" v="true" name="employees" ft="false" id="_150439784097427"/>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_15043978409509" v="true" name="location" ft="false" id="_150439784097426"/>
+            <jpa:id attribute-type="Long" v="true" name="id" ft="false" id="_150439784097424">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="department"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="CountryPK" abs="false" class="Country" v="true" xre="false" m="false" rootElement="_15043978388311" id="_150439784098928">
+        <jpa:inf e="true" n="java.io.Serializable"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="countryName" ft="false" id="_150439784098930">
+                <jpa:column name="country_name" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_150439784100232" v="true" name="region" ft="false" id="_150439784098931"/>
+            <jpa:id attribute-type="Long" v="true" name="id" ft="false" id="_150439784098929">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="country"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="RegionPK" abs="false" class="Region" v="true" xre="false" m="false" rootElement="_15043978388311" id="_150439784100232">
+        <jpa:inf e="true" n="java.io.Serializable"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="regionName" ft="false" id="_150439784100234">
+                <jpa:column name="region_name" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" name="id" ft="false" id="_150439784100233">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="region"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="EmployeePK" abs="false" class="Employee" v="true" xre="false" m="false" rootElement="_15043978388311" id="_150439784101635">
+        <jpa:inf e="true" n="java.io.Serializable"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="firstName" ft="false" id="_150439784101637">
+                <jpa:column name="first_name" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="lastName" ft="false" id="_150439784101638">
+                <jpa:column name="last_name" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="email" ft="false" id="_150439784101639">
+                <jpa:column name="email" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="phoneNumber" ft="false" id="_150439784101640">
+                <jpa:column name="phone_number" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.time.ZonedDateTime" v="true" name="hireDate" ft="false" id="_150439784101641">
+                <jpa:column name="hire_date" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Long" v="true" name="salary" ft="false" id="_150439784101642">
+                <jpa:column name="salary" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Long" v="true" name="commissionPct" ft="false" id="_150439784101643">
+                <jpa:column name="commission_pct" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_150439784097323" connected-attribute-id="_150439784097427" v="true" name="department" ft="false" id="_150439784101644"/>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_150439784101635" v="true" name="manager" ft="false" id="_150439784102146"/>
+            <jpa:one-to-many own="false" collection-type="java.util.Set" connected-entity-id="_15043978400012" connected-attribute-id="_15043978406037" v="true" name="jobs" ft="false" id="_150439784101645"/>
+            <jpa:id attribute-type="Long" v="true" name="id" ft="false" id="_150439784101636">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="employee"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="TaskPK" abs="false" class="Task" v="true" xre="false" m="false" rootElement="_15043978388311" id="_150439784103847">
+        <jpa:inf e="true" n="java.io.Serializable"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="title" ft="false" id="_150439784103849">
+                <jpa:column name="title" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="description" ft="false" id="_150439784103850">
+                <jpa:column name="description" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-many own="false" collection-type="java.util.Set" connected-entity-id="_15043978400012" connected-attribute-id="_15043978409288" v="true" name="jobs" ft="false" id="_150439784103851"/>
+            <jpa:id attribute-type="Long" v="true" name="id" ft="false" id="_150439784103848">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="task"/>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_153785798937375">
+            <i ref="_150439784101635" x="437" y="285"/>
+            <i ref="_150439784098928" x="1098" y="1167"/>
+            <i ref="_150439784100232" x="1341" y="1357"/>
+            <i ref="_15043978409509" x="884" y="914"/>
+            <i ref="_150439784096216" x="224" y="648"/>
+            <i ref="_150439784097323" x="644" y="648"/>
+            <i ref="_15043978400012" x="224" y="32"/>
+            <i ref="_150439784103847" x="32" y="285"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>
