@@ -8,10 +8,19 @@ jdk:
 - openjdk9
 - openjdk10
 - openjdk11
+node_js:
+  - "8.11.4"
 os:
   - linux
   - osx
 before_install:
+    # Upgrade NPM
+    - npm install -g npm
+    # Install with Yarn
+    - curl -o- -L https://yarnpkg.com/install.sh | bash -s
+    - export PATH=$HOME/.yarn/bin:$PATH
+    - yarn -v
+
     - git clone https://github.com/jeddict/netbeans-modeler.git ~/builds/netbeans-modeler
     - pushd ~/builds/netbeans-modeler/modeler-lib/repository/org/analytics/analytics/1.0
     - mvn install:install-file -Dfile=analytics-1.0.jar -DgroupId=org.analytics -DartifactId=analytics -Dversion=1.0 -Dpackaging=jar
@@ -31,7 +40,7 @@ before_install:
     - mvn install:install-file -Dfile=tregex-1.0.0-rc6.jar -DgroupId=org.graalvm -DartifactId=tregex -Dversion=1.0.0-rc6 -Dpackaging=jar
     - popd
     - pushd ~/builds/jeddict
-    - mvn clean install
+    - mvn clean install -DskipTests
     - popd
 
     - git clone https://github.com/jeddict/jeddict-extensions.git ~/builds/jeddict-extensions
