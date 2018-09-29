@@ -43,3 +43,5 @@ before_install:
     - pushd ~/builds/hipee
     - mvn clean install
     - popd
+script:
+    - mvn test -B -Dtestcase=AngularApplicationTest
