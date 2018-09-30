@@ -14,7 +14,7 @@ os:
   - linux
 env:
  - TEST_CASE="RepositoryApplication"
- - TEST_CASE="RestApplicationTest"
+ - TEST_CASE="RestApplication"
  - TEST_CASE="AngularApplication"
  - TEST_CASE="AngularMicroService"
  - TEST_CASE="ReactJSApplication"
