@@ -26,22 +26,22 @@ before_install:
 
     - git clone https://github.com/jeddict/netbeans-modeler.git ~/builds/netbeans-modeler
     - pushd ~/builds/netbeans-modeler
-    - mvn clean install
+    - mvn clean install -q
     - popd
 
     - git clone https://github.com/jeddict/jeddict.git ~/builds/jeddict
     - pushd ~/builds/jeddict
-    - mvn clean install -DskipTests
+    - mvn clean install -DskipTests -q
     - popd
 
     - git clone https://github.com/jeddict/jeddict-extensions.git ~/builds/jeddict-extensions
     - pushd ~/builds/jeddict-extensions
-    - mvn clean install
+    - mvn clean install -q
     - popd
 
     - git clone https://github.com/jeddict/hipee.git ~/builds/hipee
     - pushd ~/builds/hipee
-    - mvn clean install
+    - mvn clean install -q
     - popd
 
 
