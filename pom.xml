@@ -8,7 +8,7 @@
     <name>Jeddict Application Test Suite</name>
 
     <properties>
-        <netbeans.version>RELEASE82</netbeans.version>
+        <netbeans.version>RELEASE110</netbeans.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <testcase>*</testcase>
@@ -17,7 +17,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>tests</artifactId>
+            <artifactId>jeddict-tests</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

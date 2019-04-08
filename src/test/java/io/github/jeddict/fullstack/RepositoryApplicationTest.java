@@ -49,8 +49,8 @@ public class RepositoryApplicationTest extends FullStackApplicationTest {
         dockerConfigData.setDbHost(null);
 
         RepositoryData repositoryData = new RepositoryData();
-        repositoryData.setPrefixName("");
-        repositoryData.setPackage("repository");
+        repositoryData.setRepositoryPrefixName("");
+        repositoryData.setRepositoryPackage("repository");
         TechContext techContext = new TechContext(RepositoryGenerator.class);
         techContext.findSiblingTechContext(DockerGenerator.class)
                 .ifPresent(context -> context.setConfigData(dockerConfigData));
