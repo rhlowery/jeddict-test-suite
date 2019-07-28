@@ -8,7 +8,7 @@
     <name>Jeddict Application Test Suite</name>
 
     <properties>
-        <netbeans.version>RELEASE110</netbeans.version>
+        <netbeans.version>RELEASE111</netbeans.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <testcase>*</testcase>
@@ -77,9 +77,10 @@
 
     <repositories>
         <repository>
-            <id>netbeans-modules</id>
-            <name>Repository hosting NetBeans modules</name>
-            <url>http://bits.netbeans.org/maven2/</url>
+            <id>netbeans111</id>
+            <url>
+                https://repository.apache.org/content/repositories/orgapachenetbeans-1035
+            </url>
         </repository>
     </repositories>
 </project>
