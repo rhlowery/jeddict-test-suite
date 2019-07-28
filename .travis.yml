@@ -22,8 +22,7 @@ before_install:
     - curl -o- -L https://yarnpkg.com/install.sh | bash -s
     - export PATH=$HOME/.yarn/bin:$PATH
     - yarn -v
-    - export M2_HOME=/usr/local/maven-3.5.2
-    - curl -o $HOME/.m2/settings.xml https://raw.githubusercontent.com/jeddict/netbeans-module-repository/master/settings.xml
+    - export M2_HOME=/usr/local/maven-3.6.0
 
     - git clone https://github.com/jeddict/netbeans-modeler.git ~/builds/netbeans-modeler
     - pushd ~/builds/netbeans-modeler
