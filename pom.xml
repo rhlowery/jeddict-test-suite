@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.jeddict</groupId>
     <artifactId>application-test-suite</artifactId>
-    <version>5.2</version>
+    <version>5.4</version>
     <packaging>jar</packaging>
     <name>Jeddict Application Test Suite</name>
 
     <properties>
-        <netbeans.version>RELEASE111</netbeans.version>
+        <netbeans.version>RELEASE112</netbeans.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <testcase>*</testcase>
@@ -75,12 +75,4 @@
         </plugins>
     </build>
 
-    <repositories>
-        <repository>
-            <id>netbeans111</id>
-            <url>
-                https://repository.apache.org/content/repositories/orgapachenetbeans-1035
-            </url>
-        </repository>
-    </repositories>
 </project>
